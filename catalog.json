@@ -1,0 +1,13 @@
+[
+  {
+    "id": "silex-timestamp",
+    "name": "Timestamp Insert",
+    "version": "1.0.0",
+    "description": "Вставка текущей даты и времени в различных форматах. Горячие клавиши Ctrl+Shift+D (дата), Ctrl+Shift+T (время).",
+    "author": "Nuxson",
+    "icon": "📅",
+    "keywords": ["date", "time", "utility"],
+    "repository": "https://github.com/Nuxson/SilexNote-Plugins",
+    "downloadUrl": "https://github.com/Nuxson/SilexNote-Plugins/tree/main/silex-timestamp"
+  }
+]
