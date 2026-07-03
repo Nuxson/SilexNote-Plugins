@@ -1,0 +1,10 @@
+{
+  "id": "silex-timestamp",
+  "name": "Timestamp Insert",
+  "version": "1.0.0",
+  "description": "Вставка текущей даты и времени в verschiedene форматах",
+  "author": "Nuxson",
+  "main": "index.js",
+  "keywords": ["date", "time", "timestamp", "utility"],
+  "repository": "https://github.com/Nuxson/SilexNote-Plugins"
+}
