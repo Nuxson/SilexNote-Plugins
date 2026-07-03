@@ -1,0 +1,57 @@
+name: Plugin Submission
+description: Предложить плагин для каталога
+labels: ["plugin-submission"]
+body:
+  - type: input
+    id: name
+    attributes:
+      label: Имя плагина
+      description: Отображаемое имя плагина
+      placeholder: "My Awesome Plugin"
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Описание
+      description: Что делает плагин (2-3 предложения)
+      placeholder: "Плагин для..."
+    validations:
+      required: true
+  - type: input
+    id: author
+    attributes:
+      label: Автор
+      description: Ваше имя или ник
+      placeholder: "YourName"
+    validations:
+      required: true
+  - type: input
+    id: repository
+    attributes:
+      label: Репозиторий
+      description: Ссылка на GitHub репозиторий плагина
+      placeholder: "https://github.com/user/silex-plugin-name"
+    validations:
+      required: true
+  - type: input
+    id: keywords
+    attributes:
+      label: Ключевые слова
+      description: Через запятую (для поиска в каталоге)
+      placeholder: "editor, text, productivity"
+    validations:
+      required: false
+  - type: textarea
+    id: checklist
+    attributes:
+      label: Чеклист
+      description: Убедитесь что плагин соответствует требованиям
+      value: |
+        - [ ] manifest.json валиден
+        - [ ] Entry point экспортирует функцию
+        - [ ] destroy() освобождает ресурсы
+        - [ ] Горячие клавиши не конфликтуют
+        - [ ] Нет сторонних зависимостей
+    validations:
+      required: true
