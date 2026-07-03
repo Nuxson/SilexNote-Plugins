@@ -30,8 +30,7 @@ module.exports = function setupPlugin(ctx) {
     'timestamp': () => String(Math.floor(now().getTime() / 1000)),
   };
 
-  // Команда: вставить дату
-  ctx.registerCommand({
+  ctx.commands.register({
     id: 'timestamp-date',
     name: 'Вставить дату',
     description: 'Текущая дата (YYYY-MM-DD)',
@@ -41,8 +40,7 @@ module.exports = function setupPlugin(ctx) {
     },
   });
 
-  // Команда: вставить время
-  ctx.registerCommand({
+  ctx.commands.register({
     id: 'timestamp-time',
     name: 'Вставить время',
     description: 'Текущее время (HH:mm)',
@@ -52,8 +50,7 @@ module.exports = function setupPlugin(ctx) {
     },
   });
 
-  // Команда: вставить дату и время
-  ctx.registerCommand({
+  ctx.commands.register({
     id: 'timestamp-datetime',
     name: 'Вставить дату и время',
     description: 'Текущая дата и время (YYYY-MM-DD HH:mm)',
@@ -63,8 +60,7 @@ module.exports = function setupPlugin(ctx) {
     },
   });
 
-  // Команда: вставить дату по-русски
-  ctx.registerCommand({
+  ctx.commands.register({
     id: 'timestamp-date-ru',
     name: 'Вставить дату (русская)',
     description: 'Текущая дата в формате DD.MM.YYYY',
@@ -74,8 +70,7 @@ module.exports = function setupPlugin(ctx) {
     },
   });
 
-  // Команда: ISO timestamp
-  ctx.registerCommand({
+  ctx.commands.register({
     id: 'timestamp-iso',
     name: 'Вставить ISO timestamp',
     description: 'Полный ISO 8601 timestamp',
@@ -85,24 +80,21 @@ module.exports = function setupPlugin(ctx) {
     },
   });
 
-  // Горячая клавиша: Ctrl+Shift+D → дата
-  ctx.registerShortcut('Ctrl+Shift+D', (editor) => {
+  ctx.shortcuts.register('Ctrl+Shift+D', (editor) => {
     editor.chain().focus().insertContent(formats.date()).run();
   });
 
-  // Горячая клавиша: Ctrl+Shift+T → время
-  ctx.registerShortcut('Ctrl+Shift+T', (editor) => {
+  ctx.shortcuts.register('Ctrl+Shift+T', (editor) => {
     editor.chain().focus().insertContent(formats.time()).run();
   });
 
-  // Кнопка в statusbar
-  ctx.addButton({
+  ctx.uiManager.addButton({
     id: 'timestamp-btn',
     title: 'Вставить дату/время',
     icon: '📅',
     position: 'statusbar',
     action: (editor) => {
-      ctx.showModal({
+      ctx.ui.showModal({
         title: 'Timestamp',
         content: `
           <div style="display:flex;flex-direction:column;gap:6px;padding:4px 0">
@@ -126,21 +118,20 @@ module.exports = function setupPlugin(ctx) {
             if (fmt && formats[fmt]) {
               editor.chain().focus().insertContent(formats[fmt]()).run();
             }
-            document.querySelector('.modal-overlay')?.remove();
+            document.querySelector('.glass-modal-overlay')?.remove();
           });
         });
       }, 50);
     },
   });
 
-  return {
-    id: 'silex-timestamp',
-    name: 'Timestamp Insert',
-    version: '1.0.0',
-    description: 'Вставка текущей даты и времени',
-    type: 'community',
-    destroy: () => {
-      console.log('silex-timestamp: plugin unloaded');
-    },
-  };
+  ctx.events.on('editor:ready', () => {
+    ctx.log.info('EVENT', 'Timestamp plugin ready');
+  });
+
+  const lastUse = ctx.state.get('lastUse');
+  if (lastUse) {
+    ctx.log.info('STATE', 'Last used: ' + new Date(lastUse).toLocaleString());
+  }
+  ctx.state.set('lastUse', Date.now());
 };
