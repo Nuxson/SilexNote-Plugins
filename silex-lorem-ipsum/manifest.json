@@ -1,0 +1,10 @@
+{
+  "id": "silex-lorem-ipsum",
+  "name": "Lorem Ipsum Generator",
+  "version": "1.0.0",
+  "description": "Генерация Lorem Ipsum текста для макетов и прототипов",
+  "author": "Nuxson",
+  "main": "index.js",
+  "keywords": ["lorem", "ipsum", "placeholder", "generator"],
+  "repository": "https://github.com/Nuxson/SilexNote-Plugins"
+}

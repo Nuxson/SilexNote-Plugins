@@ -1,0 +1,10 @@
+{
+  "id": "silex-doc-templates",
+  "name": "Document Templates",
+  "version": "1.0.0",
+  "description": "Быстрое создание документов из готовых шаблонов",
+  "author": "Nuxson",
+  "main": "index.js",
+  "keywords": ["templates", "document", "notes", "meeting"],
+  "repository": "https://github.com/Nuxson/SilexNote-Plugins"
+}

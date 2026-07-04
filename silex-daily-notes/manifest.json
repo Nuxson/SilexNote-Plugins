@@ -1,0 +1,10 @@
+{
+  "id": "silex-daily-notes",
+  "name": "Daily Notes",
+  "version": "1.0.0",
+  "description": "Быстрое создание дневниковых записей с шаблоном по умолчанию",
+  "author": "Nuxson",
+  "main": "index.js",
+  "keywords": ["daily", "journal", "notes", "diary"],
+  "repository": "https://github.com/Nuxson/SilexNote-Plugins"
+}

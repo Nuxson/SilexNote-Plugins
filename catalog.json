@@ -20,5 +20,38 @@
     "keywords": ["pdf", "export", "print"],
     "repository": "https://github.com/Nuxson/SilexNote-Plugins",
     "downloadUrl": "https://github.com/Nuxson/SilexNote-Plugins/tree/main/silex-export-pdf"
+  },
+  {
+    "id": "silex-lorem-ipsum",
+    "name": "Lorem Ipsum Generator",
+    "version": "1.0.0",
+    "description": "Генерация Lorem Ipsum текста для макетов. Горячая клавиша Ctrl+Shift+L.",
+    "author": "Nuxson",
+    "icon": "📝",
+    "keywords": ["lorem", "ipsum", "placeholder", "generator"],
+    "repository": "https://github.com/Nuxson/SilexNote-Plugins",
+    "downloadUrl": "https://github.com/Nuxson/SilexNote-Plugins/tree/main/silex-lorem-ipsum"
+  },
+  {
+    "id": "silex-daily-notes",
+    "name": "Daily Notes",
+    "version": "1.0.0",
+    "description": "Дневниковые записи по шаблону. Горячая клавиша Ctrl+Shift+J.",
+    "author": "Nuxson",
+    "icon": "📔",
+    "keywords": ["daily", "journal", "notes", "diary"],
+    "repository": "https://github.com/Nuxson/SilexNote-Plugins",
+    "downloadUrl": "https://github.com/Nuxson/SilexNote-Plugins/tree/main/silex-daily-notes"
+  },
+  {
+    "id": "silex-doc-templates",
+    "name": "Document Templates",
+    "version": "1.0.0",
+    "description": "Шаблоны документов: встреча, задачи, статья, ретроспектива. Горячая клавиша Ctrl+Shift+T.",
+    "author": "Nuxson",
+    "icon": "📋",
+    "keywords": ["templates", "document", "notes", "meeting"],
+    "repository": "https://github.com/Nuxson/SilexNote-Plugins",
+    "downloadUrl": "https://github.com/Nuxson/SilexNote-Plugins/tree/main/silex-doc-templates"
   }
 ]
