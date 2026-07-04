@@ -9,5 +9,16 @@
     "keywords": ["date", "time", "utility"],
     "repository": "https://github.com/Nuxson/SilexNote-Plugins",
     "downloadUrl": "https://github.com/Nuxson/SilexNote-Plugins/tree/main/silex-timestamp"
+  },
+  {
+    "id": "silex-export-pdf",
+    "name": "Export PDF",
+    "version": "1.0.0",
+    "description": "Экспорт текущего документа в PDF через диалог печати. Горячая клавиша Ctrl+Shift+E.",
+    "author": "Nuxson",
+    "icon": "📄",
+    "keywords": ["pdf", "export", "print"],
+    "repository": "https://github.com/Nuxson/SilexNote-Plugins",
+    "downloadUrl": "https://github.com/Nuxson/SilexNote-Plugins/tree/main/silex-export-pdf"
   }
 ]

@@ -1,0 +1,10 @@
+{
+  "id": "silex-export-pdf",
+  "name": "Export PDF",
+  "version": "1.0.0",
+  "description": "Экспорт текущего документа в PDF через диалог печати",
+  "author": "Nuxson",
+  "main": "index.js",
+  "keywords": ["pdf", "export", "print"],
+  "repository": "https://github.com/Nuxson/SilexNote-Plugins"
+}
